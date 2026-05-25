@@ -228,6 +228,7 @@ export default function ReportDeliverySystem({ activeStrategy, evaluationResults
   };
 
   // ── SMTP Dispatch ─────────────────────────────────────────────────────────
+  // ── SMTP Dispatch ─────────────────────────────────────────────────────────
   const executeReportTransmission = async () => {
     if (!recipientEmail.trim() || emailError) { setEmailError('Enter a valid email address first.'); return; }
     setIsSending(true); setSendStatus('sending'); setTerminalLogs([]); setStep(3);
