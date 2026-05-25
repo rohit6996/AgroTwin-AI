@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-obsidian text-slate-100 font-sans h-full overflow-hidden;
+  }
+}
+
+@layer utilities {
+  /* Sci-fi matrix background grid */
+  .cyber-grid {
+    background-size: 30px 30px;
+    background-image: 
+      linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+    background-position: center;
+  }
+
+  /* Scanline rolling effect */
+  .scanlines::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 10;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+
+  .cyber-panel {
+    @apply bg-cyber-slate/80 border border-slate-800/80 rounded-lg backdrop-blur-md relative overflow-hidden transition-all duration-300;
+  }
+
+  .cyber-panel-glow {
+    @apply border-cyber-emerald/40 shadow-glow-emerald;
+  }
+
+  .glow-text-emerald {
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+  }
+
+  .glow-text-cyan {
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+  }
+
+  .glow-text-gold {
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+  }
+
+  .glow-text-crimson {
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+  }
+
+  /* Telemetry custom scrollbars */
+  .cyber-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .cyber-scrollbar::-webkit-scrollbar-track {
+    background: rgba(15, 22, 38, 0.5);
+  }
+
+  .cyber-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.2);
+    border-radius: 3px;
+  }
+
+  .cyber-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.5);
+  }
+}
+
+/* Radar sweep line */
+.radar-sweep {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(16, 185, 129, 0.15) 0deg,
+    rgba(16, 185, 129, 0.05) 90deg,
+    transparent 180deg,
+    transparent 360deg
+  );
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Glitch font effect */
+.font-digital {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+/* LED Blinker */
+.led-blinker-green {
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: blinker 1.5s infinite;
+}
+
+.led-blinker-red {
+  background-color: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+  animation: blinker 1s infinite;
+}
+
+.led-blinker-orange {
+  background-color: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+  animation: blinker 1.2s infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Dynamic radar target ping */
+.radar-ping {
+  position: absolute;
+  border: 1px solid rgba(16, 185, 129, 0.8);
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  animation: radarPingAnim 2.5s infinite;
+}
+
+@keyframes radarPingAnim {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+}
