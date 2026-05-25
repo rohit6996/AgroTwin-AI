@@ -3,6 +3,7 @@
 <p align="center">
   <img src="screenshots/dashboard.png" width="100%">
 </p>
+
 ## Generative Digital Twins for Stochastic Crop Resilience & Predictive Climate-Risk Playbook Generation
 
 AgroTwin AI is an advanced AI-powered climate resilience platform designed to help farmers prepare for unpredictable climate events using Generative Digital Twins, stochastic climate simulations, satellite intelligence, and AI-driven decision support systems.
