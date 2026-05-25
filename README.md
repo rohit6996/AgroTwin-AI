@@ -539,31 +539,31 @@ This creates:
 ## Screenshots
 
 ### Strategy Adaptability Simulator
-![SAS](screenshots\SAS.png)
+![SAS](screenshots/SAS.png)
 
 ### Health Index
-![HI](screenshots\health_ind.png)
+![HI](screenshots/health_ind.png)
 
 ### Scenario Engine
-![SE](screenshots\scenario_engine.png)
+![SE](screenshots/scenario_engine.png)
 
 ### Strategy Map
-![SM](screenshots\shap.png)
+![SM](screenshots/shap.png)
 
 ### Yield at risk
-![YaR](screenshots\YAR.png)
+![YaR](screenshots/YAR.png)
 
 ### AI Chatbot
-![Chatbot](screenshots\CRT_Copilot.png)
+![Chatbot](screenshots/CRT_Copilot.png)
 
 ### Dashboard
-![DB](screenshots\dashboard.png)
+![DB](screenshots/dashboard.png)
 
 ### Email Report
-![FR](screenshots\email.png)
+![FR](screenshots/email.png)
 
 ### Farm Report
-![FR](screenshots\report.png)
+![FR](screenshots/report.png)
 
 
 
